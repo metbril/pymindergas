@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pymindergas", # Replace with your own username
-    version="0.1.5",
+    version="0.1.6",
     author="Robert van Bregt",
     author_email="robertvanbregt@gmail.com",
     description="A python module to post meter readings to Mindergas",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.com/metbril/pymindergas",
+    url="https://github.com/metbril/pymindergas",
     packages=setuptools.find_packages(),
     install_requires=["requests"],
     classifiers=[
