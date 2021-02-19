@@ -1,5 +1,6 @@
 """pymindergas package."""
 
+import json
 import logging
 import requests
 
