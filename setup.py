@@ -13,6 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://gitlab.com/metbril/pymindergas",
     packages=setuptools.find_packages(),
+    install_requires=["requests"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3",
