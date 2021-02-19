@@ -2,6 +2,12 @@
 
 A module to post meter readings to [MinderGas.nl][mindergas].
 
+## Installation
+
+```shell
+$ pip3 install pymindergas
+```
+
 ## Disclaimer
 
 This is an open source project and does not have any affiliation with [MinderGas.nl][mindergas].
