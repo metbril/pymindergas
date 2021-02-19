@@ -10,6 +10,8 @@ $ pip3 install pymindergas
 
 ## Usage
 
+In order to be able to post readings, you first need to obtain an [API][api] token.
+
 The `postReading()` method requires an authentication token (String) and the meter reading (Float). The reading date can be any valid date (String), but is optional.
 
 Parameter | Required | Description
@@ -45,4 +47,5 @@ This is an open source project and does not have any affiliation with [MinderGas
 All product names, trademarks and registered trademarks in this repository are property of their respective owners. All images in this repository are used by the project for identification purposes only.
 
 [mindergas]: https://www.mindergas.nl/
+[api]: https://www.mindergas.nl/member/api
 [parse]: https://dateutil.readthedocs.io/en/stable/parser.html#dateutil.parser.parse
