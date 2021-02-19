@@ -51,20 +51,19 @@ class Mindergas:
         else:
             LOG.debug("Status code: %s", response.status_code)
 
-            if response.status_code == 401:
-                LOG.error("Invalid or missing authentication token.")
-                return False
-            elif response.status_code == 400:
-                LOG.error("Bad request.")
-            elif response.status_code == 422:
-                LOG.error(
-                    "Reading cannot be processed. For possible causes, see API documentation at https://www.mindergas.nl/member/api."
-                )
-                return False
-            elif response.status_code == 201:
+            if response.status_code == 201:
                 LOG.info("Reading posted.")
                 return True
             else:
-                # Unknown error
-                LOG.error("Unknown error: %.0f.", response.status_code)
+                if response.status_code == 401:
+                    LOG.error("Invalid or missing authentication token.")
+                elif response.status_code == 422:
+                    LOG.error(
+                        "Reading cannot be processed. For possible causes, see API documentation at https://www.mindergas.nl/member/api."
+                    )
+                elif response.status_code == 400:
+                    LOG.error("Nothing posted. Bad request.")
+                else:
+                    LOG.error("Nothing posted. Unknown status code: %s.", response.status_code)
+
                 return False
