@@ -55,15 +55,5 @@ class Mindergas:
                 LOG.info("Reading posted.")
                 return True
             else:
-                if response.status_code == 401:
-                    LOG.error("Invalid or missing authentication token.")
-                elif response.status_code == 422:
-                    LOG.error(
-                        "Reading cannot be processed. For possible causes, see API documentation at https://www.mindergas.nl/member/api."
-                    )
-                elif response.status_code == 400:
-                    LOG.error("Nothing posted. Bad request.")
-                else:
-                    LOG.error("Nothing posted. Unknown status code: %s.", response.status_code)
-
+                LOG.error("Code {}: {}".format(response.status_code, response.text))
                 return False
