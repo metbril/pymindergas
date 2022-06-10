@@ -1,5 +1,8 @@
 # pymindergas
 
+*!! As of June 2022 this module is no longer maintained.
+Please contact me if you find this module of value and want to take over the repository !!*
+
 A module to post meter readings to [MinderGas.nl][mindergas].
 
 ## Installation
